@@ -1,0 +1,126 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*======= Booking area ========*/
+
+// booking
+
+.booking-table {
+  .col-lg-6 {
+    &.p-0 {
+      @media #{v.$device-480px} {
+        padding: 12px !important;
+      }
+    }
+  }
+  .booking-box {
+    position: relative;
+    background: v.$theme-color-6;
+    height: 100% !important;
+    margin: 0px 15px;
+    @include m.border-radius(20px);
+    .booking_wrapper {
+      padding: 60px 40px;
+    }
+    .contaces-number {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .cont_icon {
+        font-size: v.$font-size-42;
+        color: v.$color-9;
+      }
+      p {
+        color: v.$color-10;
+      }
+      .phone_number {
+        color: v.$theme-color-5 !important;
+        font-size: v.$font-size-20;
+        margin-top: 5px;
+      }
+    }
+    @media #{v.$device-480px} {
+      margin: 0px !important;
+    }
+  }
+
+  .left-book {
+    position: relative;
+    overflow: hidden;
+    color: v.$color-5;
+    .section__title {
+      color: v.$color-5;
+      font-size: v.$font-size-48;
+      margin-bottom: 20px;
+    }
+    .section__desc {
+      color: v.$color-10;
+      margin-bottom: 36px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0px;
+      width: 140px;
+      height: 175px;
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      background-image: url("../../images/Frame.png");
+      z-index: 1;
+      overflow: hidden;
+    }
+  }
+
+  .right-book {
+    padding: 50px 25px;
+    .section__met {
+      font-size: v.$font-size-15;
+    }
+    .section__title {
+      color: v.$theme-color-6;
+      font-size: v.$font-size-48;
+      margin-bottom: 20px;
+    }
+    .section__desc {
+      color: v.$theme-color-6;
+      margin-bottom: 36px;
+    }
+    form {
+      .row {
+        @media #{v.$large_mobile} {
+          display: block;
+        }
+
+        @media #{v.$small_mobile} {
+          display: block;
+        }
+      }
+    }
+  }
+  .theme-btn {
+    border: 1px solid v.$color-4 !important;
+  }
+  .res_mb-30px {
+    @media #{v.$tab_device} {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+    @media #{v.$large_mobile} {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+  }
+  @media #{v.$tab_device} {
+    margin-top: 80px;
+  }
+
+  @media #{v.$large_mobile} {
+    margin-top: 80px;
+  }
+
+  @media #{v.$small_mobile} {
+    margin-top: 80px;
+  }
+}

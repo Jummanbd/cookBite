@@ -1,0 +1,212 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+button:focus,
+input:focus {
+  outline: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: v.$theme-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 27px;
+  font-family: v.$theme-font;
+  color: v.$theme-color !important;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: v.$font-weight-regular;
+}
+/*====== font-family =======*/
+.theme-font-2 {
+  font-family: v.$theme-font-2;
+  font-weight: 400;
+}
+
+/*====== bg =======*/
+.bg-1 {
+  background: v.$color-1;
+}
+.bg-2 {
+  background: v.$theme-color-1;
+}
+.bg-3 {
+  background: v.$color-6;
+}
+.bg-4 {
+  background: v.$color-2;
+}
+.bg-5 {
+  background: v.$theme-color-6;
+}
+.bg-6 {
+  background: v.$theme-color-5;
+}
+.bg-7 {
+  background: v.$theme-color-4;
+}
+.bg-8 {
+  background: v.$color-13;
+}
+.bg-9 {
+  background: v.$color-3 !important;
+}
+.bg-10 {
+  background: v.$color-4 !important;
+}
+.bg-gradient {
+  background-image: linear-gradient(
+    90deg,
+    hsl(148deg 100% 26%) 0%,
+    hsl(148deg 100% 25%) 8%,
+    hsl(148deg 100% 24%) 17%,
+    hsl(148deg 100% 22%) 25%,
+    hsl(148deg 100% 21%) 33%,
+    hsl(148deg 100% 20%) 42%,
+    hsl(148deg 100% 19%) 50%,
+    hsl(148deg 100% 17%) 58%,
+    hsl(148deg 100% 16%) 67%,
+    hsl(148deg 100% 14%) 75%,
+    hsl(149deg 100% 12%) 83%,
+    hsl(149deg 100% 9%) 92%,
+    hsl(149deg 100% 6%) 100%
+  ) !important;
+}
+.bg-gradient-2 {
+  background: rgba(215, 36, 0, 0.3) !important;
+  background: linear-gradient(
+    225deg,
+    rgba(215, 36, 0, 0.3),
+    rgba(63, 34, 25, 0.1)
+  ) !important;
+}
+.bg-gradient-3 {
+  background: #d724004f !important;
+  background: linear-gradient(45deg, #d724004f, #7a221017) !important;
+}
+.bg-gradient-4 {
+  background: rgba(215, 36, 0, 0.3) !important;
+  background: linear-gradient(
+    45deg,
+    rgba(215, 36, 0, 0.3),
+    rgba(63, 34, 25, 0.1)
+  ) !important;
+}
+.bg-gradient-5 {
+  background-image: linear-gradient(
+    to bottom,
+    #00833e,
+    #006733,
+    #004d28,
+    #02341c,
+    #001d0e
+  ) !important;
+}
+
+/*====== color =======*/
+
+/*====== border color =======*/
+
+/*====== padding =======*/
+.section-padding {
+  padding: 100px 0;
+}
+.section--padding {
+  padding: 200px 0;
+}
+/*====== padding top =======*/
+.pt-115px {
+  padding-top: 115px;
+}
+.pt-120px {
+  padding-top: 120px;
+}
+.pt-320px {
+  padding-top: 320px;
+}
+/*====== padding bottom =======*/
+.pb-115px {
+  padding-bottom: 115px;
+}
+.pb-120px {
+  padding-bottom: 120px;
+}
+/*======= padding right ========*/
+.pe-150px {
+  padding-right: 150px;
+}
+/*======= padding left ========*/
+
+.ps-150px {
+  padding-left: 150px;
+}
+
+/*===== margin top ====*/
+.mt-40px {
+  margin-top: 40px;
+}
+.mt-60px {
+  margin-top: 60px;
+}
+.mt-220px {
+  margin-top: 220px;
+}
+/*======= margin bottom =======*/
+
+/*======= margin left and right auto =======*/
+
+/*======= border radius =======*/
+.rounded-rounded {
+  @include m.border-radius(12px);
+}
+.rounded-pill {
+  @include m.border-radius(30px);
+}
+.rounded--pill {
+  @include m.border-radius(100px);
+}
+.rounded-full {
+  @include m.border-radius(100%);
+}
+
+// text-color
+
+.text-color-1 {
+  color: v.$theme-color-4;
+}
+.section__title {
+  @media #{v.$small_mobile} {
+    font-size: 42px !important;
+    line-height: 42px !important;
+  }
+}

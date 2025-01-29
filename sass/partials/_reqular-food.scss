@@ -1,0 +1,17 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+/*-=========== Reqular food area  ===========-*/
+.reqular-food {
+  .owl-stage-outer {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .owl-nav {
+    .owl-prev,
+    .owl-next {
+      border-color: v.$color-6 !important;
+    }
+  }
+}

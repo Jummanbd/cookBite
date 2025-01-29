@@ -1,0 +1,32 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*======= inpute ========*/
+
+.form-control {
+  border: none !important;
+  padding: 15px 30px;
+  font-size: v.$font-size-16;
+  color: v.$theme-color-6 !important;
+  margin-bottom: 23px;
+  @include m.border-radius(50px);
+  &::placeholder {
+    color: v.$theme-color-6 !important;
+    opacity: 1;
+    font-size: v.$font-size-16;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+.text-area {
+  @include m.border-radius(20px);
+}
+.form-select {
+  width: 100%;
+  padding: 15px 30px;
+
+  option {
+    color: v.$color-10 !important;
+  }
+}

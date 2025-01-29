@@ -1,0 +1,91 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*========= theme-btn ========*/
+.theme-btn {
+  font-size: v.$font-size-15;
+  font-family: v.$theme-font-2;
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 20px 30px;
+  line-height: 18px;
+  color: v.$theme-color;
+  @include m.border-radius(50px);
+  @include m.transition(0.4s);
+  &:hover {
+    background: rebeccapurple;
+  }
+}
+
+/*====== owl-nav =======*/
+.owl-nav {
+  .owl-prev,
+  .owl-next {
+    position: absolute;
+    top: 50%;
+    margin: 0 !important;
+    @include m.transform(translateY(-50%));
+    font-size: v.$font-size-26 !important;
+    border: 2px solid v.$color-8 !important;
+    width: 65px;
+    height: 65px;
+    border-radius: 50% !important;
+    color: v.$color-5 !important;
+    background: none !important;
+    cursor: pointer !important;
+    line-height: 54px;
+    &:hover {
+      border-color: v.$color-6 !important;
+      color: v.$color-6 !important;
+    }
+    .svg-inline--fa {
+      height: 26px;
+    }
+  }
+
+  .owl-prev {
+    left: -110px !important;
+    @media #{v.$laptop_l} {
+      left: -45px !important;
+    }
+    @media #{v.$laptop_m_four} {
+      left: -35px !important;
+    }
+    @media #{v.$tab_device} {
+      left: -70px !important;
+    }
+    @media #{v.$device-768px} {
+      left: -30px !important;
+    }
+    @media #{v.$large_mobile} {
+      left: -70px !important;
+    }
+    @media #{v.$device-480px} {
+      left: 0px !important;
+    }
+  }
+  .owl-next {
+    right: -110px !important;
+    @media #{v.$laptop_l} {
+      right: -45px !important;
+    }
+    @media #{v.$laptop_m_four} {
+      right: -35px !important;
+    }
+
+    @media #{v.$tab_device} {
+      right: -70px !important;
+    }
+
+    @media #{v.$device-768px} {
+      right: -30px !important;
+    }
+    @media #{v.$large_mobile} {
+      right: -70px !important;
+    }
+
+    @media #{v.$device-480px} {
+      right: 0px !important;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.fast-food-area {
+  padding-top: 350px;
+  .best-wrapper {
+    width: 515px;
+    @media #{v.$device-480px} {
+      width: 100%;
+    }
+    .section-heading {
+      .sec_met {
+        color: v.$color-6;
+      }
+      .section__title {
+        font-size: v.$font-size-48;
+        font-weight: 400;
+        line-height: 50px;
+        color: v.$color-5;
+        margin-bottom: 16px;
+        margin-top: 10px;
+      }
+      .section__desc {
+        color: v.$color-10;
+      }
+    }
+  }
+  @media #{v.$large_mobile} {
+    padding-top: 215px;
+  }
+
+  @media #{v.$small_mobile} {
+    padding-top: 230px;
+  }
+}
+/*======== fast-food-wrapper=======*/
+.fast-food-wrapper {
+  color: v.$color-5;
+  .card-item {
+    background: v.$theme-color-6;
+    cursor: pointer;
+    width: 100%;
+    @include m.border-radius(20px);
+    .card-img {
+      position: relative;
+      .card-item-img {
+        width: 100%;
+        position: relative;
+      }
+      .exp-date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 11px 15px;
+        background: v.$theme-color-6;
+        font-size: v.$font-size-20;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        @include m.transform(translate(0px, -3px));
+        @media #{v.$laptop_m_three} {
+          right: -2px;
+        }
+      }
+    }
+    .user-admin {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 30px;
+      .fa-user {
+        margin-right: 4px;
+      }
+    }
+    .card-content {
+      padding: 30px 40px 40px 40px;
+      .card-title {
+        font-size: v.$font-size-24;
+        font-weight: 400;
+        margin-top: 15px;
+      }
+      .read-more {
+        .sec_meta {
+          font-size: 15px;
+          font-weight: 400;
+          margin-top: 32px;
+          color: v.$color-5;
+        }
+      }
+    }
+    @media #{v.$laptop_m_three} {
+      margin-bottom: 30px;
+    }
+    @media #{v.$tab_device} {
+      margin-bottom: 30px;
+    }
+    @media #{v.$large_mobile} {
+      margin-bottom: 30px;
+    }
+
+    @media #{v.$small_mobile} {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*-======== discount area =======-*/
+.discount-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 90px;
+
+  .big-burger {
+    width: 713px;
+    height: 513px;
+    @media #{v.$laptop_m} {
+      width: 100%;
+    }
+
+    @media #{v.$device-480px} {
+      width: 100%;
+      height: 100%;
+    }
+    @media #{v.$small_mobile} {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /*-======== discount-right =======-*/
+  .discount-right {
+    margin-top: 60px;
+    margin-left: 120px;
+    @media #{v.$laptop_m} {
+      margin-left: 20px;
+    }
+    @media #{v.$device-768px} {
+      margin-left: 0px;
+    }
+    .section-heading {
+      .sec_met {
+        margin-bottom: 8px;
+      }
+      .section__title {
+        font-size: v.$font-size-64;
+        color: v.$theme-color-6;
+        line-height: 60px;
+        @media #{v.$laptop_m} {
+          font-size: v.$font-size-56;
+          line-height: 56px;
+        }
+      }
+      .section__desc {
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  /*-======== discount-wrapper =======-*/
+
+  .delivary-wrapper {
+    position: relative;
+    z-index: 2;
+    .delivary-wrap {
+      margin-top: 120px;
+      margin-bottom: -320px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 60px 80px;
+      align-items: center;
+      @include m.border-radius(20px);
+      .section-heading {
+        .section__title {
+          font-size: v.$font-size-64;
+          margin-bottom: 20px;
+
+          @media #{v.$laptop_m_three} {
+            font-size: v.$font-size-54;
+            line-height: 56px;
+          }
+          @media #{v.$large_mobile} {
+            font-size: v.$font-size-46;
+            line-height: 46px;
+          }
+          @media #{v.$device-375px} {
+            font-size: v.$font-size-36 !important;
+            line-height: 36px;
+          }
+        }
+      }
+      .hero_order_button {
+        margin-top: 40px;
+      }
+      img {
+        @media #{v.$laptop_m_three} {
+          width: 500px;
+        }
+        @media #{v.$tab_device} {
+          margin-top: 30px;
+        }
+        @media #{v.$device-480px} {
+          width: 350px !important;
+          margin-top: 30px !important;
+        }
+        @media #{v.$large_mobile} {
+          margin-top: 30px;
+          width: 400px;
+        }
+        @media #{v.$small_mobile} {
+          margin-top: 30px;
+          width: 350px;
+        }
+        @media #{v.$device-425px} {
+          width: 285px !important;
+          margin-top: 30px;
+        }
+        @media #{v.$device-375px} {
+          width: 250px !important;
+        }
+      }
+      @media #{v.$tab_device} {
+        display: block;
+      }
+
+      @media #{v.$large_mobile} {
+        display: block;
+      }
+      @media #{v.$small_mobile} {
+        display: block;
+      }
+      @media #{v.$device-480px} {
+        padding: 45px;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/food-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.03;
+  }
+}

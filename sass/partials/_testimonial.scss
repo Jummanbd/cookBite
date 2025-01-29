@@ -1,0 +1,114 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*-=========== Testimonial ===========-*/
+.testimonial-area {
+  .best-wrapper {
+    width: 515px;
+
+    .section-heading {
+      .section__title {
+        font-size: v.$font-size-48;
+        font-weight: 400;
+        line-height: 50px;
+        color: v.$color-5;
+        margin-bottom: 60px;
+      }
+      .section__desc {
+        color: v.$color-10;
+      }
+    }
+    .sec_met {
+      color: v.$color-11 !important;
+    }
+    @media #{v.$device-480px} {
+      width: 100% !important;
+    }
+  }
+}
+
+.testimonial-carousel {
+  .testimonial-item {
+    background: v.$theme-color;
+    @include m.border-radius(20px);
+    width: 100%;
+    padding: 40px;
+    .reviews {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media #{v.$device-425px} {
+        align-items: start;
+      }
+      .review-user {
+        display: flex;
+        gap: 30px;
+        @media #{v.$laptop_m_three} {
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+        }
+        .user-name {
+          color: v.$color-5;
+        }
+        .sec_mete {
+          color: v.$color-10 !important;
+        }
+
+        .user-img {
+          width: 88px;
+          height: 88px;
+          flex-shrink: 0;
+          @media #{v.$laptop_m_three} {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+        .star {
+          color: v.$color-12;
+          display: inline-block;
+          margin-right: 8px;
+        }
+        @media #{v.$device-425px} {
+          flex-direction: column;
+          align-items: start;
+        }
+      }
+
+      .right-img {
+        width: 85px;
+        height: 65px;
+        flex-shrink: 0;
+      }
+    }
+    .section__desc {
+      color: v.$color-10 !important;
+      margin-top: 30px;
+      font-size: v.$font-size-24;
+      line-height: 36px;
+      font-weight: 400;
+      @media #{v.$device-375px} {
+        font-size: v.$font-size-20;
+      }
+    }
+    @media #{v.$device-375px} {
+      padding: 25px;
+    }
+  }
+  .owl-dot {
+    margin-top: 60px;
+    span {
+      width: 30px !important;
+      height: 4px !important;
+      @include m.border-radius(20px);
+      @include m.transition(0.3s);
+    }
+    &.active {
+      span {
+        background: v.$color-6 !important;
+        width: 50px !important;
+      }
+    }
+  }
+}

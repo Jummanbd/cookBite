@@ -1,0 +1,88 @@
+$theme-color: #ffffff;
+$theme-color-1: rgba(240, 21, 67, 1);
+$theme-color-2: #f2ecdc;
+$theme-color-3: #d9d9d9;
+$theme-color-4: rgba(0, 131, 62, 1);
+$theme-color-5: rgba(14, 23, 48, 1);
+$theme-color-6: rgba(255, 255, 255, 1);
+
+// google font
+$theme-font: "Open Sans", serif;
+$theme-font-2: "ZCOOL XiaoWei", serif;
+/*==== font size ====*/
+$font-size-96: 96px;
+$font-size-90: 90px;
+$font-size-64: 64px;
+$font-size-60: 60px;
+$font-size-56: 56px;
+$font-size-54: 54px;
+$font-size-50: 50px;
+$font-size-48: 48px;
+$font-size-46: 46px;
+$font-size-45: 45px;
+$font-size-42: 42px;
+$font-size-40: 40px;
+$font-size-36: 36px;
+$font-size-35: 35px;
+$font-size-32: 32px;
+$font-size-30: 30px;
+$font-size-28: 28px;
+$font-size-26: 26px;
+$font-size-24: 24px;
+$font-size-22: 22px;
+$font-size-20: 20px;
+$font-size-19: 19px;
+$font-size-18: 18px;
+$font-size-17: 17px;
+$font-size-16: 16px;
+$font-size-15: 15px;
+$font-size-14: 14px;
+$font-size-13: 13px;
+$font-size-12: 12px;
+$font-size-11: 11px;
+
+/*==== font weight ====*/
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+/*==== color ====*/
+$white: #fff;
+$black: rgba(0, 0, 0, 1);
+$color-gray: #f7f7ff;
+$color-gray-2: #eeeeee;
+$color-1: rgba(244, 241, 234, 1);
+$color-2: rgba(243, 236, 220, 1);
+$color-3: rgba(255, 255, 255, 0.2);
+$color-4: rgba(255, 255, 255, 0.1);
+$color-5: rgba(14, 23, 48, 1);
+$color-6: rgba(211, 0, 0, 1);
+$color-7: rgba(217, 217, 217, 1);
+$color-8: rgba(231, 231, 235, 1);
+$color-9: rgba(0, 0, 0, 0.8);
+$color-10: rgba(89, 89, 89, 1);
+$color-11: rgba(0, 131, 62, 1);
+$color-12: rgba(255, 186, 8, 1);
+$color-13: rgba(45, 27, 25, 1);
+$color-14: rgba(14, 23, 48, 0.2);
+$table-bg: transparent;
+
+// responsive
+$laptop_l: "(max-width: 1440px)";
+$laptop_m: "(max-width: 1366px)";
+$laptop_m_two: "(max-width: 1280px)";
+$laptop_m_three: "(max-width: 1199px)";
+$laptop_m_four: "(max-width: 1024px)";
+$tab_device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large_mobile: "only screen and (min-width: 480px) and (max-width: 767px)";
+$small_mobile: "only screen and (min-width: 320px) and (max-width: 479px)";
+$device-768px: "(max-width: 768px)";
+$device-480px: "(max-width: 480px)";
+$device-425px: "(max-width: 425px)";
+$device-375px: "(max-width: 375px)";
+$device-320px: "(max-width: 320px)";

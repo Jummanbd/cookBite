@@ -1,0 +1,111 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+/*-=========== join-us area ===========-*/
+.join-us {
+  position: relative;
+  background-image: url("../../images/img-31.png") !important;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  margin-top: 30px;
+  @include m.border-radius(20px);
+
+  .join-wrapper {
+    position: relative;
+    width: 80%;
+    z-index: 1;
+    color: v.$theme-color-6;
+    padding: 80px;
+    .sec_met {
+      font-size: v.$font-size-15;
+    }
+    .section__title {
+      font-size: v.$font-size-48;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+    .section__desc {
+      font-size: v.$font-size-16;
+      width: 465px;
+      @media #{v.$device-480px} {
+        width: 100%;
+      }
+      @media #{v.$small_mobile} {
+        width: 100%;
+      }
+    }
+    @media #{v.$device-768px} {
+      width: 100%;
+    }
+    @media #{v.$device-480px} {
+      padding: 40px;
+    }
+    @media #{v.$small_mobile} {
+      padding: 40px;
+    }
+  }
+  .submit-wrap {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    gap: 30px;
+    margin-top: 40px;
+    .theme-btn {
+      flex-basis: 30%;
+      @media #{v.$tab_device} {
+        flex-basis: 100%;
+      }
+      @media #{v.$small_mobile} {
+        flex-basis: 100%;
+      }
+    }
+    .form-control {
+      flex-basis: 70%;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      @media #{v.$tab_device} {
+        flex-basis: 100%;
+        margin-bottom: 30px !important;
+      }
+      @media #{v.$large_mobile} {
+        margin-bottom: 30px !important;
+      }
+      @media #{v.$small_mobile} {
+        margin-bottom: 30px !important;
+        width: 100%;
+      }
+    }
+    @media #{v.$laptop_m_three} {
+      width: 100%;
+    }
+    @media #{v.$small_mobile} {
+      width: 100%;
+    }
+    @media #{v.$tab_device} {
+      display: block;
+    }
+    @media #{v.$large_mobile} {
+      display: block;
+    }
+    @media #{v.$small_mobile} {
+      display: block;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      91.01deg,
+      #d30000 4.38%,
+      #7e0000 46.45%,
+      rgba(109, 0, 0, 0) 84.23%
+    );
+    @include m.border-radius(20px);
+  }
+}

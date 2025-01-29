@@ -1,0 +1,192 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*-======== about area =======-*/
+.about-area {
+  position: relative;
+  /*-========  =======-*/
+  .about-overlay {
+    font-size: v.$font-size-90;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    margin-top: 70px;
+    div {
+      color: v.$color-11;
+      margin-bottom: 125px;
+    }
+  }
+  /*-======== sider-left =======-*/
+  .sider-left {
+    .section-heading {
+      .sec_met {
+        color: v.$color-6;
+        font-size: v.$font-size-15;
+        line-height: 26px;
+      }
+      .section__title {
+        font-size: v.$font-size-48;
+        line-height: 50px;
+        color: v.$color-9;
+        margin-top: 10px;
+        margin-bottom: 39px;
+        text-transform: capitalize;
+        @media #{v.$laptop_m} {
+          font-size: v.$font-size-45;
+        }
+        @media #{v.$laptop_m_three} {
+          font-size: v.$font-size-36;
+        }
+        @media #{v.$tab_device} {
+          font-size: v.$font-size-48;
+        }
+
+        @media #{v.$large_mobile} {
+          font-size: v.$font-size-48;
+        }
+      }
+    }
+    .section__desc {
+      color: v.$color-10;
+      margin-bottom: 13px;
+      font-size: v.$font-size-16;
+    }
+    .theme-btn {
+      margin-top: 48px;
+    }
+  }
+  /*-======== sider-right =======-*/
+
+  .slide-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 80px;
+    @media #{v.$laptop_m_three} {
+      align-items: start;
+    }
+    @media #{v.$laptop_m} {
+      margin-left: 0;
+    }
+    @media #{v.$tab_device} {
+      flex-direction: column;
+      align-content: center;
+    }
+    @media #{v.$large_mobile} {
+      flex-direction: column;
+      align-content: center;
+    }
+    @media #{v.$device-768px} {
+      flex-direction: column;
+      margin: 0 auto !important;
+    }
+    @media #{v.$small_mobile} {
+      flex-direction: column;
+      align-content: center;
+    }
+    .big-prizza-img {
+      width: 100%;
+      height: 100%;
+      margin-right: 80px;
+      @media #{v.$laptop_m} {
+        margin-right: 30px;
+      }
+      @media #{v.$laptop_m_three} {
+        width: 75%;
+        height: 75%;
+        margin-right: 5px;
+      }
+      @media #{v.$tab_device} {
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+      }
+      @media #{v.$large_mobile} {
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+      }
+
+      @media #{v.$small_mobile} {
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+      }
+    }
+    .today-list {
+      display: block;
+      @media #{v.$tab_device} {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      @media #{v.$large_mobile} {
+        display: flex;
+        justify-content: space-between;
+      }
+      @media #{v.$device-480px} {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      @media #{v.$small_mobile} {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .today-item {
+        display: block;
+        margin: 20px 0;
+        @media #{v.$laptop_m_three} {
+          margin: 0 0 20px 0;
+        }
+        .today-heading {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          @media #{v.$laptop_m_three} {
+            gap: 6px;
+          }
+          .today-img {
+            width: 40px;
+            height: 40px;
+            @media #{v.$laptop_m_three} {
+              width: 30px;
+              height: 30px;
+            }
+          }
+          .section-title {
+            font-family: v.$theme-font-2;
+            color: v.$color-5;
+            font-size: v.$font-size-48;
+            font-weight: 400;
+            @media #{v.$laptop_m} {
+              font-size: v.$font-size-45;
+            }
+            @media #{v.$laptop_m_three} {
+              font-size: v.$font-size-36;
+            }
+            @media #{v.$tab_device} {
+              font-size: v.$font-size-48;
+            }
+          }
+        }
+        .section__desc {
+          color: v.$color-10;
+          margin-top: 10px;
+          font-size: v.$font-size-16;
+          font-weight: 400;
+          text-align: center;
+          @media #{v.$tab_device} {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}

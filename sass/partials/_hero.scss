@@ -1,0 +1,47 @@
+@use "./variables" as v;
+/*-=========== hero-area-4 ===========-*/
+.hero-area {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 367px 0 267px 0;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("../../images/hero.jpg");
+  }
+  .hero-content {
+    .section-heading {
+      .section__title {
+        color: v.$theme-color;
+        font-size: v.$font-size-96;
+        line-height: 100px;
+        margin-bottom: 40px;
+        @media #{v.$device-480px} {
+          font-size: v.$font-size-64 !important;
+          line-height: 80px !important;
+        }
+        @media #{v.$device-425px} {
+          font-size: v.$font-size-50 !important;
+          line-height: 80px !important;
+        }
+        @media #{v.$device-375px} {
+          font-size: v.$font-size-50 !important;
+          line-height: 60px !important;
+        }
+      }
+      .section__desc {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

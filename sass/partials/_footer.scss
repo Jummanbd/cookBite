@@ -1,0 +1,125 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/*======== footer-area =======*/
+.footer-area {
+  .logo-box {
+    .logo {
+      gap: 10px;
+      .logo-img {
+        width: 36px !important;
+        height: 40px !important;
+      }
+      .logo_text {
+        font-size: v.$font-size-30 !important;
+        color: v.$color-5;
+      }
+    }
+  }
+  .section-heading {
+    .section__title {
+      font-size: v.$font-size-64;
+      color: v.$color-5;
+      line-height: 60px;
+      margin-top: 20px;
+      @media #{v.$laptop_m_four} {
+        font-size: v.$font-size-45 !important;
+        line-height: 50px !important;
+      }
+    }
+  }
+  .term-list {
+    display: inline-block;
+  }
+  h3 {
+    font-size: v.$font-size-24;
+    color: v.$color-5;
+  }
+
+  .res_mb-30px {
+    @media #{v.$tab_device} {
+      margin-bottom: 30px;
+    }
+    @media #{v.$large_mobile} {
+      margin-bottom: 30px;
+    }
+    @media #{v.$small_mobile} {
+      margin-bottom: 30px;
+    }
+  }
+}
+// social-icons
+
+.social-icons {
+  margin-top: 30px;
+  .media-icon {
+    width: 35px !important;
+    height: 35px !important;
+    background: v.$theme-color;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 35px;
+    color: v.$color-5 !important;
+    font-size: v.$font-size-14;
+    cursor: pointer;
+    &:hover {
+      background-color: v.$color-6;
+      color: v.$theme-color !important;
+    }
+  }
+}
+
+.all-lists {
+  color: v.$color-10 !important;
+  margin-top: 30px;
+
+  li {
+    margin-top: 15px;
+    a {
+      color: v.$color-10 !important;
+
+      &:hover {
+        color: v.$color-6 !important;
+      }
+    }
+  }
+}
+// copyright
+
+.copy-right {
+  margin-top: 82px;
+  color: v.$color-10 !important;
+  padding: 30px;
+  border-top: 1px solid v.$color-14;
+  border-left: 1px solid v.$color-14;
+  border-right: 1px solid v.$color-14;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-color: v.$color-14;
+  @media #{v.$tab_device} {
+    flex-direction: column;
+  }
+  @media #{v.$large_mobile} {
+    flex-direction: column;
+  }
+
+  @media #{v.$small_mobile} {
+    flex-direction: column;
+  }
+  .list-items {
+    @media #{v.$tab_device} {
+      margin-top: 15px;
+    }
+    li {
+      display: inline-block;
+      margin-left: 12px;
+      a {
+        color: v.$color-10 !important;
+
+        text-decoration: none !important;
+      }
+    }
+  }
+}
